@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang-"pt-br">
+<head>
+<meta charset="UFT-8"/>
+<title>Motel Itamara</title>
+</head>
+<body>
+<p> Conheça<p>
+<p> Faça sua reserva<p>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itamara Motel</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: #321f27;
+        }
+        ::-webkit-scrollbar{
+            width: 12px;
+            background-color: #45011A;
+        }
+        ::-webkit-scrollbar-thumb{
+            border-radius: ;
+            background: linear-gradient(45deg, #dC5b51, #e47168);
+        }
+
+
+
+        body {
+            font-family: var(--font-style);
+            background-color: #441c1c;
+            padding: 2% 3% 0% 3%;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+            margin: 5%;
+            width: 450px;
+            display: flex;
+            flex-direction: row;
+            padding: 1% 0;
+            border-radius: 15px;
+            border: 0.1px solid #FF0808;
+            background-color: #18181B;
+            box-shadow: 0 4px 8px 0 #FF0808, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        li {
+            margin: auto;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        li:after{
+            display: block;
+        }
+        li:hover::after{
+            transform: scaleX(1);
+        }
+        input {
+            caret-color: #FF0808;
+        }
+
+
+
+            #cabeçalho{
+                text-align: center;
+                align-content: center;
+            }
+                #logo{
+                    padding: 1%;
+                    background-color: white;
+                    border-radius: 30px;
+                    width: 50%;
+                }
+
+                #header {
+                    flex-direction: row;
+                    list-style: none;
+                    align-content: center;
+                    width: 50%    
+                }
+                .link{
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #fff;
+                    margin-block: 2px;
+                }
+                    .link::before,.link::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #e65454;
+                        transform: scaleX(0);
+                        transition: transform .25s;
+                    }
+                    .link::before{
+                        top: -3px;
+                        transform-origin: left;
+                    }
+                    .link::after{
+                        content: ' ';
+                        width: 100%;
+                        height: 1px;
+                        background-color: #fff;
+                        border-radius: 4px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform .25s ease;
+                    }
+                    .link:hover::after{
+                        transform: scaleX(1);
+                    }
+            
+            #corpo {
+                background-color: lightgray;
+                opacity: 50%;
+                padding: 1%;
+                border-radius: 10px;
+                }
+                h1, h3 {
+                    color: #E62412;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                p{
+                    color: #F54A13;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }            
+                .paragraph span{
+                        display: block; opacity: 0;
+                        animation: reveal .5s forwards var(--delay);
+                }
+                @keyframes reveal {
+                        from {translate: 0 20px;}
+                        to {translate: none;opacity: 1; }
+                }
+
+                .carrossel{
+                    display: grid;
+                    grid-auto-flow: column;
+                    scroll-behavior: auto;
+                    gap: 1.2rem;
+                    overflow-y: auto;
+                    overscroll-behavior-x: contain;
+                    scroll-snap-type: x mandatory;
+                    scrollbar-width: none;
+                }
+                #quartos{
+                    background-color: white;
+                    border-radius: 15px;
+                    padding: 0% 3%;
+                }
+
+
+                *{
+                    box-sizing: border-box;
+                }
+                #formulário {
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    padding: 40px;
+                    background: #242026;
+                    border-radius: 10px;
+                    box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+                    transform: translate(-50%,-50%);
+                }
+                .form-box input {
+                    position: relative;
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 30px;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    outline: none;
+                    background: transparent;
+                }
+                .form-box label {
+                   position: relative;
+                   left: 0;
+                   top: -60px;
+                   padding: 10px 0;
+                   font-size: 16px;
+                   color: #fff;
+                   pointer-events: none;
+                   transition: .5s;
+                }
+                .form-box input:focus-label,
+                .form-box input:valid-label {
+                    top: -85px;
+                    left: 0;
+                    color:#8f7cec;
+                    font-size: 17px;
+                }
+
+                #botão {
+                    padding: 10px 20px;
+                    color: #cbb0db;
+                    font-size: 16px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    overflow: hidden;
+                    transition: .5s;
+                    letter-spacing: 4px;
+                    border: 1px solid #8f7cec;
+                    margin: auto;
+                }
+                #botão:hover{
+                    background: #8f7cec;
+                    color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 0 5px #8f7cec, 0 0 5px #8f7cec, 0 0 5px #8f7cec, 0 0 5px #8f7cec,;
+                }
+                .botão-form {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 20px;
+                }
+
+            
+
+            #rodapé {
+                background-color: black;
+                color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="cabeçalho">
+        <div class="container">
+            <div id="logo">
+                <img src="imagens/logo.PNG">
+            </div>
+
+            <div id="header" class="list">
+                <ul>
+                    <li><a href="" class="link">Quem Somos   </a></li>
+                    <li><a href="" class="link">Nossos quartos</a></li>
+                    <li><a href="" class="link">Reservas</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <br><br>
+
+    <div id="corpo">
+
+        <div id="sobre">
+            <h1 id="" class="paragraph">    <span style="--delay: 0s;">Quem somos nós</span> </h1>
+            <p id="" class="paragraph">     
+                <span style="--delay: .5s;">    Somos do grupo Pousada dos Bandeirantes Ltda. empresa atuando com excelência no ramo de hotelaria desde 1980s...</span>
+            </p>
+        </div>
+
+        <br>
+
+        <h1> Nossos Quartos:</h1>
+        <div class="carrossel">
+            <article id="quartos" >   
+                <h3>Apartamento Standart<br>
+                (Icones)</h3>
+            </article>
+            <article id="quartos">   
+                <h3>Apartamento Premium<br>
+                (Icones)</h3>
+            </article>
+            <article id="quartos">   
+                <h3>Apartamento Supra<br>
+                (Icones)</h3>
+            </article>
+            <article id="quartos">   
+                <h3>Apartamento Master<br>
+                (Icones)</h3>     
+            </article>
+        </div>
+
+        <h1>Agende sua Reserva</h1>
+        <div id="formulário">
+            <form>
+                <div class="form-box">
+                    <label>Seu nome:</label>
+                        <input type="text" required name="nome">    <br>
+                </div>
+
+                <div class="form-box">
+                    <label>Telefone:</label>
+                        <input type="number" required name="tel">  <br>
+                </div>
+                
+                </div class="form-box">
+                    <label>E-mail:</label>
+                        <input type="email" required name="email">   <br>
+                </div>
+                
+                <div>
+                    <label>Quando:</label>
+                        <input type="date" required name="data">    <br>
+                </div>
+
+                <div>
+                    <label>Tipo do Apartamento:</label> <br>
+                        <input type="radio" required name="tipoDoQuarto">Apartamento Standart  <br>
+                        <input type="radio" required name="tipoDoQuarto">Apartamento Premium   <br>
+                        <input type="radio" required name="tipoDoQuarto">Apartamento Supra   <br>
+                        <input type="radio" required name="tipoDoQuarto">Apartamento Master   <br>
+                </div>
+                
+                <div>
+                    <label>Deixe-nos uma mensagem:</label>
+                        <input type="text">                         <br>
+                </div>
+
+                <div class="botão-form">
+                    <a id="botão">Enviar</a>
+                </div>
+            </form>
+        </div>   
+    </div>
+
+
+    </div>
+
+    <br><br>
+
+    <div id="rodapé">
+        <footer>© Itamara Motel. Todos os direitos reservados.</footer>
+    </div>
+</body>
+</html>

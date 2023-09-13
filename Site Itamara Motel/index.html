@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+        <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap" rel="stylesheet">
+    
+        <script src="https://kit.fontawesome.com/c2bc28be69.js" crossorigin="anonymous"></script>
+        
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+        <title>Itamara Motel</title>
+
+        <script>window.rwbp={email:'paulo.hp126@hotmail.com',phone:'+55 (31) 99894-8494',message:'Olá, converse conosco pelo whatsapp..',lang:'pt-BR'}</script><script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script>
+    
+    
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                margin-left: 5%;
+                margin-right: 5%;
+                text-align: center;
+            }
+            .backgroundImage {
+                background-image: url("imagens/mesh-679.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            .container {
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: 1fr;
+            }
+            #cabeçalho {
+                width: 100%;
+                height: auto;
+                margin-top: 50px;
+                margin-bottom: 40px;
+            }
+                #logo{
+                background: #ffffff;
+                border-radius: 50px;
+                text-align: center;
+                padding: 10px 25px 10px 25px;
+                }
+                #localização {
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size:smaller
+                }
+                #barraEtc {
+                background: whitesmoke;
+                border-radius: 15px;
+                padding: 20px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color: #B22222; 
+                }
+                    #barraEtc ul {
+                        margin: 5%;
+                        width: 450px;
+                        display: flex;
+                        flex-direction: row;
+                        list-style: none;
+                        padding: 25px 0;
+                        border-radius: 25px;
+                        border: 0.1px solid #099FFF;
+                        background-color: #181818;
+                        box-shadow: 0 4px 8px 0 #00ffff, 0 6px 20px 0, rgba(0, 0, 0, 0.19);
+                    }
+                    #barraEtc li {
+                        margin: auto;
+                        color: white;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                    #barraEtc li:after {
+                        display: block;
+                    }
+                    #barraEtc li:hover::after{
+                        transform: scaleX(1);
+                    }
+                #barra {
+                text-align: justify;
+                }
+            #corpo {
+                background-color: rgba(165, 165, 165, 0.6);
+                border-radius: 15px;
+                width: 100%;
+                height: auto;
+                padding-bottom: 20px;
+                background-position: middle;
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+            #rodapé {
+                background-color: #000000;
+                border-radius: 15px;
+                width: 100%;
+                height: 300px;
+                background-position: bottom;
+                color: rgb(255, 255, 255);
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 10px;
+                text-align: center;
+            }
+                #reserva {
+                font-family: Arial, Helvetica, sans-serif;
+                }
+                .input-group {
+                position: relative;
+                }
+                .input {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 4px;
+                    font: inherit;
+                    color: #fff;
+                    background-color: transparent;
+                    outline: 2px solid #fff;
+                }
+                .input-label {
+                    transform: translate(10px, 10px);
+                    transform-origin: left;
+                    transition: transform .25s;
+                }
+                .input:focus+.input-label,
+                .input:valid+.input-label {
+                    transform:
+                    translate(0, -30px) scale(.8);
+                    color: #d1c5fc;
+                }
+                .input:is  (:focus, :valid) {
+                    outline-color: #d1c5fc;
+                }
+                #enviarReserva {
+                background: #ff2323;
+                border-radius: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                text-align: center;
+                color: antiquewhite;
+                padding: 10px 25px 10px 25px;
+                line-height: 24px; 
+                }
+            ul{
+                padding-left: 0;
+                list-style: none;
+            }
+            h2 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            input, textarea{
+                background: whitesmoke;
+                border-radius: 10px;
+                padding: 10px 25px 10px 25px;
+                border: 0;           
+            }
+            .input {
+                width: 50%;
+            }
+            label {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            #galeria {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .headGaleria {
+                background: whitesmoke;
+                border-radius: 15px;
+                padding: 10px 20px 10px 20px;
+                text-align: center;
+                width: 300px;
+                border-right: 10%;
+            }
+            
+            .fotos {
+                padding: 15px 30px;
+                background: whitesmoke;
+                border-radius: 15px;
+            }
+            .fotos img {
+                width: 100%;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #galeria ul {
+                width: 700px;
+                list-style: none;
+                display: flex;
+                margin: 100 auto;
+            }
+            .lbox{
+                visibility: hidden;
+                opacity:0;
+            }
+            .lbox:target{
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rga(10,10,10,.7);
+                position: fixed;
+
+            }
+            .box_img{
+                width: 100px;
+                margin: 150px auto;
+            }
+            .btn{
+                color: #fff;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                font-size: 40px;
+                text-align: center;
+            }
+            #prev{
+                left: 5%;
+                top: 45%;
+            }
+            #next{
+                right: 5%;
+                top: 45%;
+            }
+            #close{
+                top: 0;
+                right: 2%;
+            }
+            .box_img img{
+                opacity: 0;
+            }
+            .lbox:target    .box_img img{
+                opacity: 1;
+                transition: linear .4% ;
+            }
+            .min {
+                width: 200px;
+                padding: 10px;
+            }
+        </style>
+
+    
+    </head>
+
+
+    <body class="backgroundImage">
+        <div class="container" id="cabeçalho">
+            <div id="nomeEmpresa">
+                <div id="logo">
+                    <img src="imagens/2021-.PNG">
+                </div>
+                <br>
+            </div>
+            <br>
+            <div id="barraEtc">
+                <!-- <div id="localização"  class="container">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a target="_blank" href="https://maps.app.goo.gl/nRThiCwopRA2ZP7r9">Rodovia dos Incofidentes, km 64, Amarantina, Ouro Preto-MG</a>
+                </div> -->
+                <header>
+                    <div id="barra"  class="container">
+                        <ul>
+                            <li<a href="#somos">Quem somos  |</a></li>
+                            <li><a href="#galeria">Suítes   |</a></li>
+                            <li><a href="#reserva">Reservas |</a></li>
+                            <li><a>Localização  |</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div id="corpo">
+            <div id="conteudo">
+
+                <div id="galeria">
+                    <h2>Nossa galeria de fotos</h2>
+                    <div class="container">
+                        <ul>
+                            <div class="headGaleria">
+                                <li><a href="#listaStandart">
+                                    Quartos Standart<br>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-bed"></i>
+                                    <i class="fa-solid fa-tv"></i>
+                                    <i class="fa-solid fa-fan"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                </a></li>
+                            </div>
+                            <div class="headGaleria">
+                                <li><a href="#listaPremium">
+                                    Quartos Premium <br>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-bed"></i>
+                                    <i class="fa-solid fa-tv"></i>
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                </a></li>
+                            </div>
+                            <div class="headGaleria">
+                                <li><a href="#listaSupra">
+                                    Quartos Supra   <br>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-bed"></i>
+                                    <i class="fa-solid fa-tv"></i>
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    <i class="fa-solid fa-fire"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                </a></li>
+                            </div>
+                            <div class="headGaleria">
+                                <li><a href="#listaMaster">
+                                    Quartos Master  <br>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-bed"></i>
+                                    <i class="fa-solid fa-tv"></i>
+                                    <i class="fa-solid fa-snowflake"></i>
+                                    <i class="fa-solid fa-fire"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                    <i class="fa-solid fa-shower"></i>
+                                    <i class="fa-solid fa-hot-tub-person"></i>
+
+                                </a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div id="iconesImgs"  class="container">
+
+
+                        <!-- listaStandart Premium e Master-->
+
+
+                        <ul id="listaSupra">
+                            <li><a href="#img1"><img src="imagens/Supra (1).jpg" class="min"></a></li>
+                            <li><a href="#img2"><img src="imagens/Supra (2).jpg" class="min"></a></li>
+                            <li><a href="#img3"><img src="imagens/Supra (3).jpg" class="min"></a></li>
+                        </ul>
+                        <div class="lbox" id="img1">
+                        <div class="box_img">
+                            <a href="#img3" class="btn" id="prev">&#171;</a>
+                            <a href="" class="btn" id="close">X</a>
+                            <img src="imagens/Supra (1).jpg">
+                            <a href="#img2" class="btn" id="next">&#187;</a>
+                        </div>
+                        </div>
+                        <div class="lbox" id="img2">
+                        <div class="box_img">
+                            <a href="#img1" class="btn" id="prev">&#171;</a>
+                            <a href="" class="btn" id="close">X</a>
+                            <img src="imagens/Supra (2).jpg">
+                            <a href="#img3" class="btn" id="next">&#187;</a>
+                        </div>
+                        </div>
+                        <div class="lbox" id="img3">
+                        <div class="box_img">
+                            <a href="#img2" class="btn" id="prev">&#171;</a>
+                            <a href="" class="btn" id="close">X</a>
+                            <img src="imagens/Supra (3).jpg">
+                            <a href="#img1" class="btn" id="next">&#187;</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reserva" class="input-group">
+                    <form action="https://formspree.io/f/xwkzvwvn" method="post">
+                        <h2>Agende sua reserva</h2>
+                        <p>
+                            <label class="input-label">Data do Check-IN: *</label><br>
+                            <input type="datetime-local" required name="data" class="input"><br><br>
+                            
+                            <label class="input-label">Nome: *</label><br>
+                            <input type="text" required name="nome" class="input"><br><br>
+
+                            <label class="input-label">Telefone: *</label><br>
+                            <input type="tel" required name="telefone" class="input"><br><br>
+                                
+                            <label class="input-label">E-mail: *</label><br>
+                            <input type="email" required name="email" class="input"><br><br>
+                        
+                            <label>Qual o tipo de quarto desejado: *</label>
+                                <ul>
+                                    <li><input type="radio" required name="quarto" value="Standart">Standart</li>
+                                    <li><input type="radio" required name="quarto" value="Premium">Premium</li>
+                                    <li><input type="radio" required name="quarto" value="Supra">Supra</li>
+                                    <li><input type="radio" required name="quarto" value="Master">Master</li>
+                                </ul>
+                        
+                            <label class="input-label">Mensagem: </label><br>
+                                <textarea rows="10%" cols="20%" name="mensagem" class="input"></textarea>
+                            
+                                <br>
+                        </p>
+                        <button id="enviarReserva" type="submit">Solicitar Reserva</button><br>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <div id="rodapé" class="container">
+            <div id="rodapéContato">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a>+55 (31) 99894-8494</a></li>
+                    <li>itamaramotel@gmail.com</li>
+                    <li>    <a href="https://www.instagram.com/itamaramotel/?__coig_restricted=1">  <i class="fa-brands fa-instagram"></i>  @itamaramotel   </a></li>
+                    <li>    <a href="https://maps.app.goo.gl/nRThiCwopRA2ZP7r9">  <h6>  Rodovia dos Incofidentes (BR 356), km 64    <br>    Localidade de Coelhos em Amarantina  <br>  CEP: 35.412-000  |   Ouro Preto - MG </h6> </a>  </li>
+                </ul>
+            </div>
+            <div id="rodapePagamentos">
+                <h3>Formas de pagamento</h3>
+            </div>
+            <div id="avaliação">
+                <h3>Nos deixe uma avaliação:</h3>
+            </div>
+        </div>
+    </body>
+</html>
