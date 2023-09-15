@@ -1,0 +1,46 @@
+body {
+    background-color: #f39f5a;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    font-family: 'Courgette', cursive;
+    color: #1D1A39;
+}
+
+.carousel {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: #ccc;
+  }
+  
