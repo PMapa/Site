@@ -2,7 +2,7 @@ body {
     background-color: #f39f5a;
 }
 
-h1, h2, h3, h4, h5, h6, label {
+h1, h2, h3, h4, h5, h6, p,- label, {
     font-family: 'Courgette', cursive;
     color: #1D1A39;
 }
